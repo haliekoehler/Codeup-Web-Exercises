@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Rasa');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
 
 body{
     background-image: url('../img/burl.jpg');
@@ -10,7 +10,7 @@ body{
 
 h1{
     text-align: center;
-    font-family: 'Rasa', serif;
+    font-family: 'Titillium Web', sans-serif;
     font-size: 48px;
     padding: 15px;
     margin-top: 25px;
@@ -20,14 +20,12 @@ h1{
 h2{
     text-align: center;
     color: aliceblue;
+    font-family: 'Titillium Web', sans-serif;
 }
 
-h3{
+h3 h4{
     color: white;
-}
-
-h4{
-    color:aliceblue;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 p{
@@ -35,33 +33,22 @@ p{
     color: aliceblue;
 }
 
-img{
-    margin: 20px;
-}
-
 dl{
     color: aliceblue;
+}
+
+label{
+    color: white;
 }
 
 .container{
     max-width: 800px;
 }
 
-.project-box{
-    background-color: white;
-    margin: 20px;
-    /*height: 400px;*/
-    width: 300px;
-    float: left;
-    border-radius: 5px;
-}
+
 
 .text-muted{
     text-align: center;
-    color: white;
-}
-
-label{
     color: white;
 }
 
@@ -75,6 +62,9 @@ label{
 
 .tab{
     color: white;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 .footer{
@@ -87,22 +77,52 @@ label{
     background-color: #00000;
 }
 
+.project-div{
+    background-color: #4e4f67;
+    max-width: 100%;
+    height: 450px;
+}
+
+.project-img{
+    height: 250px;
+    width: 250px;
+    border-radius: 15px;
+    margin: 30px 15px 15px 15px;
+    float: left;
+}
+
+.project-text{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.project-header{
+    padding-top: 15px;
+    text-align: center;
+}
+
+.form-group{
+    padding: 10px;
+
+.btn{
+    margin-bottom: 15px;
+}
+
 #main-header{
-    font-family: 'Rasa', serif;
+    font-family: 'Titillium Web', sans-serif;
     font-size: 125px;
 }
 
-#halie-gaige {
-     border-radius: 50px 5px 50px 5px;
-     margin-top: 25px;
-     height: auto;
-     max-width: 85%;
- }
+#contact-form{
+    margin-top: 50px;
+    background-color: #4e4f67;
+    border-radius: 15px;
+}
 
-#projectx{
-    position: relative;
-    height: auto;
-    max-width: 100%;
-    border-radius: 25px;
+#self{
+    height: 250px;
+    width: 250px;
+    border-radius: 30px;
+    opacity: .80;
 }
 
