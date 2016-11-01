@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Rasa');
 
 body{
-    background-color: #BCD1EB;
-    background-image: url('../img/nebula.jpg');
+    background-image: url('../img/burl.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
+    margin-bottom: 60px;
 }
 
 h1{
@@ -19,6 +20,10 @@ h1{
 h2{
     text-align: center;
     color: aliceblue;
+}
+
+h3{
+    color: white;
 }
 
 h4{
@@ -41,8 +46,9 @@ dl{
 .container{
     max-width: 800px;
 }
+
 .project-box{
-    background-color: #839faa;
+    background-color: white;
     margin: 20px;
     /*height: 400px;*/
     width: 300px;
@@ -52,10 +58,36 @@ dl{
 
 .text-muted{
     text-align: center;
+    color: white;
+}
+
+label{
+    color: white;
+}
+
+.resume-header{
+    text-align: center;
+}
+
+.right-align-dates{
+    float: right;
+}
+
+.tab{
+    color: white;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    color: white;
+    background-color: #00000;
 }
 
 #main-header{
-    background-color:;
     font-family: 'Rasa', serif;
     font-size: 125px;
 }
@@ -73,3 +105,4 @@ dl{
     max-width: 100%;
     border-radius: 25px;
 }
+
