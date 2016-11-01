@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Walter+Turncoat');
+
+body {
+    font-family: 'Walter Turncoat';
+    /*background-color: darkolivegreen;*/
+    background-image: url('../img/tiny_grid_@2X.png')
+
+}
+
+h1, h2 {
+    color: midnightblue;
+    text-decoration: underline;
+}
+
+ul {
+    list-style: square;
+}
+
+td, tr{
+    padding: 2px;
+    font-size: 10px;
+}
+
+
+/* unvisited link (:link) */
+a:link {
+    color: #43729c;
+}
+/* visited link (:visited) */
+a:visited {
+    color:black;
+}
+/* mouse hover over link (:hover) */
+a:hover {
+    color: #316555;
+}
+/* active/selected link (:active) */
+a:active {
+    color:green;
+}

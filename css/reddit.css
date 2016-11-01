@@ -1,0 +1,49 @@
+body{
+    background-image: url('../img/Reddit-Mascot-Logo-200.png'), url('../img/amazon-logo-200.jpg');
+    background-repeat: no-repeat;
+}
+
+div{
+    border: 3px;
+    border-style: outset;
+    /*box-sizing: border-box;*/
+    height: 150px;
+    width: 150 px;
+    margin: 20px;
+    padding: 15px;
+    float: left;
+    border-radius: 10px;
+}
+
+#reddit{
+    background-color: lightcoral;
+}
+
+#amazon{
+    background-color: turquoise;
+    position: absolute;
+    margin-left: 225px;
+    margin-top: 150px;
+}
+
+button{
+    height: 50px;
+    width: 100px;
+    margin-left: 25px;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: #000;
+    color: white;
+}
+
+input[type=text] {
+    margin-left: 5px;
+    margin-top: 15px;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: white;
+    background-color: #000;
+    font-family: Courier;
+    text-align: center;
+}

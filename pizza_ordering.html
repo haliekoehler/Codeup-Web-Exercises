@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza Ordering Form</title>
+    <link rel="stylesheet" href="css/pizza_ordering.css"
+</head>
+<body>
+    <h1 id="main-header">Place Order</h1>
+    <form method="POST" action="http://requestb.in/ohy23roh">
+        <div id="add-info">
+            <h2>Your Information</h2>
+            <label for="email">Email Address: </label>
+            <input type="text" id="email" name="email" placeholder="your email here">
+            <br>
+            <label for="phone">Phone Number: </label>
+            <input type="text" id="phone" name="phone" placeholder="(###) ###-####">
+            <br>
+            <label for="address">Address: </label>
+            <input type="text" id="address" name="address" placeholder="Street Address, City, State, Zip">
+            <p id="deliv-purpose">*For Delivery Purposes*</p>
+        </div>
+        <div id="custom">
+            <h2>Select Your Toppings</h2>
+                <strong>Meats: </strong>
+                <label><input type="checkbox" id="pep" name="toppings []" value="pep"> Pepperoni</label>
+                <label><input type="checkbox" id="saus" name="toppings []" value="saus"> Sausage</label>
+                <label><input type="checkbox" id="bacon" name="toppings []" value="bacon"> Canadian Bacon</label>
+                <br>
+                <strong>Veggies: </strong>
+                <label><input type="checkbox" id="mush" name="toppings []" value="mush"> Mushrooms</label>
+                <label><input type="checkbox" id="oli" name="toppings []" value="oli"> Olives</label>
+                <label><input type="checkbox" id="spin" name="toppings []" value="spin"> Spinach</label>
+                <br>
+                <strong>Extras: </strong>
+                <label><input type="checkbox" id="xtra1" name="toppings []" value="xtra1"> Extra Cheese</label>
+                <label><input type="checkbox" id="xtra2" name="toppings []" value="xtra2"> Extra Extra Cheese!</label>
+            <h2>Select Type of Crust </h2>
+                <label for="crust">Crust Options: </label>
+                <select id="crust" name="crust">
+                    <option>Thin</option>
+                    <option>Thick</option>
+                    <option>Cheese-Filled</option>
+                </select>
+        </div>
+        <div id="recieve">
+        <h2>Recieve Order by</h2>
+            <label><input type="radio" name="q1" value="pickup">Pick-Up</label>
+            <label><input type="radio" name="q1" value="delivery">Delivery</label>
+        </div>
+        <button type="submit" id="submit">Place Order Now!</button>
+    </form>
+</body>
+</html>

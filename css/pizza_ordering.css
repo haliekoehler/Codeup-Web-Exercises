@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers|Ruda');
+
+body{
+    background-color: crimson;
+    font-family: 'Ruda', sans-serif;
+}
+
+h1, h2{
+    text-decoration: underline;
+}
+
+div{
+    background-color: antiquewhite;
+    width: 600px;
+    padding: 2px 10px 10px 10px;
+    margin: 5px;
+    border-size: 4px black;
+}
+
+p{
+    text-indent: 15px;
+}
+
+button{
+    background-color: antiquewhite;
+    font-family: 'Bangers', cursive;
+    font-size: 2em;
+    margin-left: 10px;
+    width: 600px;
+    border-radius: 5px;
+}
+
+button:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#main-header{
+    font-family: 'Bangers', cursive;
+    font-size: 4em;
+    /*text-decoration: underline overline;*/
+    color: white;
+    width: 600px;
+    text-align: center;
+}
+
+#deliv-purpose{
+    font-size: 10px;
+}
+
+#toppings{
+    width: 400px;
+    background-color: white;
+}

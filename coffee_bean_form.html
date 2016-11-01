@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coffee Bean Order Form</title>
+    <link rel="stylesheet" href="css/coffee.css">
+</head>
+<body>
+    <div id="page-wrap" class="outer">
+        <h1 id="main-header">Place your Coffee Order</h1>
+        <div id="type-of-roast" class="inner">
+        <h2>Type of Roast:</h2>
+            <div id="custom-info" class="inner2">
+            <label for="roast"><span>Options:</span></label>
+            <select id="roast" name="roast">
+                <option>Dark</option>
+                <option>Medium</option>
+                <option>Light</option>
+            </select>
+            <br><br>
+            <span>Quanity:</span> <input type="text">
+            <br>
+            <br>
+                <br>
+            <input type="checkbox" id="renewal" name="renewal" value="yes">
+            <label for="renewal" id="sign-up">Sign up for auto-renewal</label>
+            </div>
+        </div>
+        <div id="delivery" class="inner">
+            <h2>Delivery Information:</h2>
+            <div id="delivery-info" class="inner2">
+            <p>Location for Delivery:</p>
+            <textarea rows="3" cols="35" placeholder="Address, City, State, Zip"></textarea>
+            <p>Additional Comments:</p>
+            <textarea rows="2" cols="35" placeholder="Specific Instructions ex:gate code, alternate enterance, etc."></textarea>
+            </div>
+        </div>
+        <br>
+        <button class="button" type="submit"><span>Submit your Order!</span></button>
+    </div>
+</body>
+</html>

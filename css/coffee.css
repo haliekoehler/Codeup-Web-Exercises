@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+body{
+    background-image: url('../img/coffee_bg.jpg');
+    background-attachment: fixed;
+}
+
+#page-wrap{
+    width: 550px;
+    margin: 0px auto;
+}
+
+#main-header{
+    color: #FFF;
+    font-size: 60px;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+}
+
+#custom-info{
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 100px;
+    background-color: #ecbfa3;
+}
+
+#sign-up{
+    font-size: 12px;
+    font-weight: 100;
+}
+
+#delivery-info{
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 100px;
+}
+
+h2{
+    font-family: 'Lobster', cursive;
+    color: #371e07;
+    font-size: 26px;
+    text-align: center;
+}
+
+.inner{
+    background-color: #ecbfa3;
+    font-family: Helvetica;
+    font-weight: bolder;
+    padding: 2px 0 0 0;
+    margin: 20px;
+    border-radius: 25px;
+}
+
+.inner2{
+    padding: 0px 0px 30px 40px;
+    font-family: Helvetica;
+}
+
+span, p{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+button{
+    background-color: #dba889;
+    font-family: 'Lobster', cursive;
+    width: 200px;
+    padding: 5px;
+    margin-left: 175px;
+    margin-bottom: 50px;
+}
+
+select{
+    width: 120px;
+}
+
+input[type=text]{
+    border-radius: 5px;
+    width: 100px;
+}
+
+textarea{
+    border-radius: 5px;
+}

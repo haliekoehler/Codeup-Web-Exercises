@@ -1,0 +1,44 @@
+h1{
+    font-weight: bold;
+}
+
+.box{
+    border: 1px solid black;
+    height: 72px;
+    width: 172px;
+    padding: 22px;
+    box-sizing: border-box;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: bolder;
+}
+
+#red{
+    background-color: red;
+}
+
+#orange{
+    background-color: orange;
+    margin-left: 30px;
+}
+
+#yellow{
+    background-color: yellow;
+    margin-left: 60px;
+}
+
+#green{
+    background-color: green;
+    margin-left: 90px;
+}
+
+#blue{
+    background-color: blue;
+    margin-left: 120px;
+}
+
+#violet{
+    background-color: violet;
+    margin-left: 150px;
+}
