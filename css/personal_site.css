@@ -119,10 +119,13 @@ label{
     border-radius: 15px;
 }
 
-#self{
+#self-image{
     height: 250px;
     width: 250px;
     border-radius: 30px;
     opacity: .80;
 }
 
+.photo{
+    margin: 0 auto;
+}
