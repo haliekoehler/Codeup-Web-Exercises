@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Resume</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/personal_site.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/personal_site.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 
 <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
+    <div class="container-fluid" id="nav-container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                 <span class="icon-bar"></span>
@@ -24,10 +26,10 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="welcome.html">Home</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact_info.html">Contact</a></li>
+                <li><a href="welcome.html"><i class="fa fa-home"></i> Home</a></li>
+                <li class="active"><a href="resume.html"><i class="fa fa-pencil-square-o"></i> Resume</a></li>
+                <li><a href="portfolio.html"><i class="fa fa-code"></i> Portfolio</a></li>
+                <li><a href="contact_info.html"><i class="fa fa-send-o"></i> Contact</a></li>
             </ul>
         </div>
     </div>
@@ -46,7 +48,11 @@
             <div id="about-me-tab" class="tab-pane fade in active">
                 <h2 class="resume-header">About Me</h2>
                 <hr>
-                <p>Aliquam hendrerit suscipit dignissim. Cras ornare turpis sagittis, tempor nisi vitae, consequat
+                <!--<div class="container">-->
+                    <img src="img/painting.png" id="painting">
+                <!--</div>-->
+
+                <p id="about-me-text">Aliquam hendrerit suscipit dignissim. Cras ornare turpis sagittis, tempor nisi vitae, consequat
                     nulla. Donec non dui urna. Donec viverra a metus quis laoreet. Fusce eu luctus ligula. Sed eget ex
                     lectus. Vestibulum sit amet erat eget velit egestas scelerisque. Pellentesque non ullamcorper eros.
                     Suspendisse sed consectetur eros, non mollis nisi. Vestibulum ante ipsum primis in faucibus orci
@@ -122,5 +128,9 @@
     </footer>
 
 <!-- script from jQuery-->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>

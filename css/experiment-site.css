@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+body{
+    background-image: url('../img/pexels-bg-northernlights.jpeg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+nav{
+    position: fixed;
+    margin-top: 20px;
+}
+
+h2{
+    text-align: center;
+    color: #b3adff;
+    font-family: 'Orbitron', sans-serif;
+}
+
+a {
+    color: #729a2a;
+}
+
+.navbar-toggle, .icon-bar {
+    border:1px groove #486923;
+    background-color: transparent;
+}
+
+ul.nav a:hover {
+    color: #fff;
+    background-color: transparent;
+}
+
+.navbar-collapse{
+    text-align: left;
+}
+
+
+#main-header{
+    font-family: 'Orbitron', sans-serif;
+    color: #b3adff;
+    font-weight: bolder;
+    font-size: 70px;
+    text-align: center;
+    padding: 20px 0 0 0;
+    letter-spacing: 15px;
+}
+
+#header-fluid{
+    background: rgba(86, 68, 85, 0.2)
+}
+
+/*#mars{*/
+    /*height: 175px;*/
+    /*width: 175px;*/
+    /*opacity: 0.8;*/
+    /*padding: 15px;*/
+    /*border-radius: 70px 70px 2px 2px;*/
+/*}*/
+
+.container{
+    max-width: 800px;
+}
+
+p{
+    color: #486923;
+    padding: 15px;
+}
+
+.modal-content{
+    background-color: #0a0a23;
+}
+
+.btn{
+    background-color: transparent;
+    border: 1px groove rgba(86, 68, 85, 0.5);
+}
+
+.opacity-header{
+    background: rgba(86, 68, 85, 0.2);
+    letter-spacing: 10px;
+}

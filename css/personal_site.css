@@ -6,14 +6,15 @@ body{
     background-attachment: fixed;
     background-size: cover;
     margin-bottom: 60px;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 h1{
     text-align: center;
     font-family: 'Titillium Web', sans-serif;
     font-size: 48px;
-    padding: 15px;
-    margin-top: 25px;
+    /*padding: 15px;*/
+    /*margin-top: 25px;*/
     color: aliceblue;
 }
 
@@ -23,7 +24,12 @@ h2{
     font-family: 'Titillium Web', sans-serif;
 }
 
-h3 h4{
+h3 {
+    color: white;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h4{
     color: white;
     font-family: 'Titillium Web', sans-serif;
 }
@@ -33,19 +39,17 @@ p{
     color: aliceblue;
 }
 
-dl{
-    color: aliceblue;
-}
-
 label{
     color: white;
+}
+
+.icon-bar{
+    font-family: 'Titillium Web', sans-serif;
 }
 
 .container{
     max-width: 800px;
 }
-
-
 
 .text-muted{
     text-align: center;
@@ -73,8 +77,9 @@ label{
     width: 100%;
     /* Set the fixed height of the footer here */
     height: 60px;
+    padding-top: 20px;
     color: white;
-    background-color: #00000;
+    background-color: transparent;
 }
 
 .project-div{
@@ -101,11 +106,8 @@ label{
     text-align: center;
 }
 
-.form-group{
+.form-group {
     padding: 10px;
-
-.btn{
-    margin-bottom: 15px;
 }
 
 #main-header{
@@ -115,17 +117,38 @@ label{
 
 #contact-form{
     margin-top: 50px;
-    background-color: #4e4f67;
+    /*background-color: #4e4f67;*/
     border-radius: 15px;
 }
 
-#self-image{
+#self {
     height: 250px;
     width: 250px;
     border-radius: 30px;
+    margin-top: 50px;
     opacity: .80;
 }
 
-.photo{
-    margin: 0 auto;
+#painting {
+    height: 250px;
+    width: 250px;
+    border-radius: 30px;
+    margin: 0px 20px 10px 10px;
+    float: left;
+}
+
+#about-me-text{
+    margin: 10px;
+}
+
+#nav-container{
+    background-color: #171724;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+#submit-button{
+    margin-bottom: 15px;
+    background-color: #4e4f67;
+    border-style: none;
+    font-family: 'Titillium Web', sans-serif;
 }
