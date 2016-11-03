@@ -70,7 +70,14 @@ p{
 }
 
 .modal-content{
-    background-color: #0a0a23;
+    background-color: rgba(10, 10, 36, 0.7);
+}
+
+.modal-title{
+    color: #b3adff;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .btn{
@@ -81,4 +88,16 @@ p{
 .opacity-header{
     background: rgba(86, 68, 85, 0.2);
     letter-spacing: 10px;
+}
+
+.project-placeholder{
+    height: 250px;
+    width: 250px;
+    border-radius: 20px;
+}
+
+#modal-container{
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 500px;
 }
