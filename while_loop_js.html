@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>While Loop JS</title>
+    <!--<script src="js/while%20loop.js"></script>-->
+</head>
+<body>
+    <!--<script>-->
+
+        <!--var i = 2;-->
+        <!--while (i <= 65536){-->
+            <!--console.log(i);-->
+            <!--i *=2;-->
+        <!--}-->
+
+    <!--</script>-->
+
+    <script>
+
+//        var allCones = Math.floor(Math.random() * 50) + 50;
+//
+//        do {
+//            console.log("You have " + allCones + " cones!")
+//            var cones = Math.floor(Math.random() * 5) + 1;
+//            allCones = allCones - cones;
+//            console.log("You have " + allCones + " cones remaining.")
+//        } while (allCones > cones);
+//
+
+        var coneInventory=Math.floor(Math.random() * 50) + 50;
+        var conesToSell;
+
+        while (coneInventory > 0) {
+            conesToSell = Math.floor(Math.random() * 50) + 50;
+            if (conesToSell <= coneInventory) {
+                console.log('Selling ' + conesToSell + ' cones...');
+                coneInventory -= conesToSell;
+            } else {
+                console.log('I can\'t sell you ' + conestoSell + ', I only have' + coneInventory);
+            }
+        }
+
+        console.log('I sold all the cones!')
+
+    </script>
+</body>
+</html>

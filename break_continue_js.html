@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Break Continue JS</title>
+</head>
+<body>
+
+    <script>
+        'use strict';
+
+        for (var i = 1; i <= 50; i++){
+            var random = Math.floor((Math.random()) * 50) + 1;
+            if (random % 2 == 0) {
+                console.log('Skipping all even numbers...');
+            } if (random % 2 == 1){
+                break;
+            }
+        }
+            console.log('Your odd number is ' + random );
+
+
+        console.log("Random odd number to skip is: " + random);
+        for (var oddNumber = 1; oddNumber <= 50; oddNumber += 1) {
+            if (oddNumber % 2 == 0) {
+                continue;
+            }
+            if (random == oddNumber) {
+                console.log("Yikes! Skipping number: " + random);
+            } else {
+                console.log("Here is an odd number: " + oddNumber)
+            }
+        }
+    </script>
+
+    <script>//example from Fer
+
+        do {
+            //generate a random number
+            numberToSkip = Math.floor(Math.random() * 50) + 1;
+            //while we have an even number
+        } while (numberToSkip % 2 ==0);
+
+        //now we know we have an odd number
+
+        console.log('Here we go! Let\'s skip number ' + numberToSkip + ' . ');
+
+        for (var i = 1; i <== 50; i += 1) {
+            //skip even numbers
+            if (i % 2 == 0){
+                continue;
+            }
+        }
+
+        //check if we have the number to skip
+        if (i == numberToSkip) {
+            console.log('Yikes! Skipping number ' + numberToSkip + '.');
+            continue;
+        }
+        //if none of the above ifs fired, we'll just print out our message
+        console.log(i + ' is a lovely odd number.');
+
+
+    </script>
+</body>
+</html>
