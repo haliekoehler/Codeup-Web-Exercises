@@ -5,7 +5,7 @@
 
 var userName = prompt('What is your name?');
 
-while (userName === ""){
+while (!userName){
     userName = prompt('What is your name?');
 }
     alert('Welcome, ' + userName + ' !');
