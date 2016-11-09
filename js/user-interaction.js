@@ -1,5 +1,7 @@
 "use strict";
 
+(function(){
+
 // TODO: Ask the user for their name.
 //       Keep asking if an empty input is provided.
 
@@ -24,3 +26,5 @@ if (pizza) {
 } else {
     alert('Huh, well that\'s weird');
 }
+
+})();

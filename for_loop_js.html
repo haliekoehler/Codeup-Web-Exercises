@@ -23,13 +23,34 @@
         <!--}-->
     <!--</script>-->
 
+
+
+
+
+
     <script> //exercise 4 - count from 100 to 5 by fives
 
         for (var n = 100; n > 4; n -= 5){
             console.log(n);
         }
 
+        var start = 100;
+        var stop = 0;
+        var step = 5;
+
+        function countDown(start, stop, step){
+            for (var x = start; x > stop; x -= step){
+                console.log(x);
+            }
+        }
+
+        console.log(countDown(start, stop, step));
     </script>
+
+
+
+
+
 
     <script> //exercise 3 - generate 10 random numbers and declare odd or even
 
@@ -44,13 +65,30 @@
 
     </script>
 
+
+
+
+
+
+
     <script> //exercise 2 - generate number multiplied
 
     var x = 6;
+    var number1 = 6;
+    var number2 = 8;
 
     for (var y = 1; y <= 10; y++) {
         console.log(x + ' x ' + y + ' = ' + (x * y));
     }
+
+    function generateMultiplicationTables(number1, number2){
+        for (var y = 1; y <= 10; y++) {
+            console.log(number1 + ' x ' + y + ' = ' + (number1 * y));
+        }
+        for (var z = 1; x <= 10; )
+    }
+
+    console.log(generateMultiplicationTables(number1, number2));
 
     </script>
 
