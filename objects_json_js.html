@@ -36,10 +36,14 @@
         // todo:
         // Loop through the array of books using .forEach and print out the specified information about each one.
         // start loop here
-        console.log("Book #" + todo);
-        console.log("Title: " + todo);
-        console.log("Author: " + todo);
-        console.log("---");
+
+        books.forEach(function(book, i){
+            console.log(book);
+            console.log("Book #" + i++);
+            console.log("Title: " + book.title);
+            console.log("Author: " + book.author);
+            console.log("---");
+        });
         // end loop here
 
 
