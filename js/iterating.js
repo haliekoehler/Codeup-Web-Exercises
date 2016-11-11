@@ -21,9 +21,8 @@
     // using for loop
     console.log("with a loop");
 
-    for(var i = 0 ; i < names.length, i++;){
+    for(var i = 0 ; i < names.length; i++){
         console.log("name " + (i+1) + " " + names[i] + " i " + i);
-        console.log("Why is this not working?");
     }
 
     // using forEach loop

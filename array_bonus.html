@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Bonus</title>
+</head>
+<body>
+
+<script>
+
+    //write a function that will take a parameter as an array
+    //then pick an item randomly out of the array
+
+    var myArray = ['Kenny', 'Eric', 'Stan', 'Kyle'];
+
+    function getRandomInt(min, max){
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+
+    function getRandomItem(array){
+        //define our boundaries
+        var min = 0;
+        var max = array.length - 1;
+
+        //get a random index
+        var randomIndex = getRandomInt()
+    }
+
+
+</script>
+
+</body>
+</html>
