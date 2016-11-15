@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Puppies</title>
+</head>
+<body>
+
+<h1>Puppies</h1>
+<hr>
+<div>
+    <ul>
+        <li id="name1"></li>
+        <li id="des1"></li>
+        <li id="spay1"></li>
+    </ul>
+</div>
+<div>
+    <ul>
+        <li id="name2"></li>
+        <li id="des2"></li>
+        <li id="spay2"></li>
+    </ul>
+</div>
+<div>
+    <ul>
+        <li id="name3"></li>
+        <li id="des3"></li>
+        <li id="spay3"></li>
+    </ul>
+</div>
+<div>
+    <ul>
+        <li id="name4"></li>
+        <li id="des4"></li>
+        <li id="spay4"></li>
+    </ul>
+</div>
+
+
+<script>
+    "use strict";
+
+        var puppies = [
+            {
+                name: 'muffins',
+                description: 'this dog is as cute as a muffin!',
+                spayed: true
+            },
+            {
+                name: 'buddy',
+                description: 'buddy is just waiting to be your best friend!',
+                spayed: false
+            },
+            {
+                name: 'ein',
+                description: 'this corgi has quite seems like he\'s seen outer space...',
+                spayed: true
+            },
+            {
+                name: 'nibler',
+                description: 'this puppy like to nibble, but she won\'t bite!',
+                spayed: false
+            }
+        ];
+
+    document.getElementById('name1').innerHTML='Name: ' + puppies[0].name;
+    document.getElementById('des1').innerHTML='Description: ' + puppies[0].description;
+    document.getElementById('spay1').innerHTML='Spayed: ' + puppies[0].spayed;
+
+    document.getElementById('name2').innerHTML='Name: ' + puppies[1].name;
+    document.getElementById('des2').innerHTML='Description: ' + puppies[1].description;
+    document.getElementById('spay2').innerHTML='Spayed: ' + puppies[1].spayed;
+
+    document.getElementById('name3').innerHTML='Name: ' + puppies[2].name;
+    document.getElementById('des3').innerHTML='Description: ' + puppies[2].description;
+    document.getElementById('spay3').innerHTML='Spayed: ' + puppies[2].spayed;
+
+    document.getElementById('name4').innerHTML='Name: ' + puppies[3].name;
+    document.getElementById('des4').innerHTML='Description: ' + puppies[3].description;
+    document.getElementById('spay4').innerHTML='Spayed: ' + puppies[3].spayed;
+</script>
+</body>
+</html>

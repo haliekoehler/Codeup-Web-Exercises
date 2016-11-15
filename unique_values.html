@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unique Values</title>
+</head>
+<body>
+<script>
+    'use strict';
+
+    function uniqWithCount(array){
+        var counts = {};
+
+        // set the proper keys
+        array.forEach(function(item){
+            counts[item] = 0;
+        });
+
+        // set the proper
+        array.forEach(function(item){
+            counts[item] += 1;
+        });
+
+        return counts;
+    }
+
+    console.log(uniqWithCount([1,2,3,4,2,3,3,3,4,4,1,2,3,2,1]));
+
+</script>
+</body>
+</html>

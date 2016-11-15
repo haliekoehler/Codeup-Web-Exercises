@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Example JS</title>
+</head>
+<body>
+
+
+
+<script>
+//    (function(){
+    "use strict";
+
+        //write a function that generates a range of numbers as an array
+
+        var min;
+        var max;
+
+        var makeArray = function getRange(min, max, step) {
+            var range = [];
+
+            if (typeof step==='undefined'){
+                step = 1;
+            }
+
+            if (min < max){
+                for (var i = min; i <= max; i+=step) {
+                    range.push(i);
+            }} else if (min > max){
+                for (var i = min; i >= max; i-=step) {
+                    range.push(i);
+            }}
+                return range;
+        };
+
+        // modify the function such that you can pass in a third parameter
+        // can the third parameter be optional (default to 1)?
+        // can you create a range in reverse order? i.e. `range(5,2)
+//    }());
+</script>
+</body>
+</html>
