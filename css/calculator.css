@@ -1,0 +1,51 @@
+h1{
+    margin-left: 50px;
+}
+
+input{
+    height: 20px;
+    width: 50px;
+    margin: 5px;
+
+}
+
+.button{
+    display: block;
+    width: 30px;
+    height: 20px;
+    padding: 5px 5px 15px 5px;
+    text-align: center;
+    border-radius: 5px;
+    float: left;
+    background-color: #9d9d9d;
+    margin: 5px;
+}
+
+#main-container{
+    height: 300px;
+    width: 190px;
+    background-color: #345c69;
+    padding: 30px;
+    margin: 50px;
+    border-radius: 20px;
+}
+
+#buttonsDiv{
+    margin: 30px 10px 10px 10px;
+}
+
+#operator{
+    width: 25px;
+}
+
+#btn4{
+    clear: left;
+}
+
+#btn7{
+    clear: left;
+}
+
+#btnC{
+    clear: left;
+}
