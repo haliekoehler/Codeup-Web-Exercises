@@ -20,6 +20,7 @@
     var btnD = document.getElementById('btnD');
     var btnE = document.getElementById('btnE');
     var btnC = document.getElementById('btnC');
+    var decimal = document.getElementById('decimal');
 
     btn1.addEventListener('click', addDigit);
     btn2.addEventListener('click', addDigit);
@@ -37,6 +38,7 @@
     btn0.addEventListener('click', addDigit);
     btnE.addEventListener('click', evaluate);
     btnD.addEventListener('click', addOp);
+    decimal.addEventListener('click', addDecimal);
 
 
 
@@ -74,6 +76,27 @@
         console.log(this.value);
     }
 
+    function addDecimal(){
+        var centerField = document.getElementById('operator');
+
+        if (centerField.value == '') {
+            // target left input
+            var leftField = document.getElementById('leftOp');
+
+            // get button's value
+            var val = document.getElementById('decimal').value;
+
+            //start in the first input
+            leftField.value += this.value;
+
+
+        } else if (centerField.value != ''){
+            var rightField = document.getElementById('rightOp');
+            var val2 = document.getElementById('decimal').value;
+            rightField.value += this.value;
+        }
+    }
+
     // clear all fields
     function clear(){
         document.getElementById('leftOp').value = '';
@@ -96,7 +119,7 @@
         document.getElementById('leftOp').value = '';
         document.getElementById('rightOp').value = '';
 
-        return leftField.value = sum;
+        return leftField.value = sum.toFixed(2);
     }
 
 }());
