@@ -40,85 +40,48 @@
     btnD.addEventListener('click', addOp);
     decimal.addEventListener('click', addDecimal);
 
-
-
     function addDigit(){
-
         var centerField = document.getElementById('operator');
-
         if (centerField.value == '') {
-            // target left input
-            var leftField = document.getElementById('leftOp');
-
-            // get button's value
-            var val = document.getElementsByClassName('button').value;
-
-            //start in the first input
-            leftField.value += this.value;
-
-
+            var leftField = document.getElementById('leftOp'); // target left input
+            var val = document.getElementsByClassName('button').value; // get button's value
+            leftField.value += this.value; //start in the first input
         } else if (centerField.value != ''){
             var rightField = document.getElementById('rightOp');
             var val2 = document.getElementsByClassName('button').value;
             rightField.value += this.value;
         }
     }
-
     function addOp(){
-        // target center input
-        var centerField = document.getElementById('operator');
-
-        //get buttons value
-        var val = document.getElementsByClassName('button').value;
-
-        //assign value to center input
-        centerField.value = this.value;
-        console.log(this.value);
+        var centerField = document.getElementById('operator'); // target center input
+        var val = document.getElementsByClassName('button').value; //get buttons value
+        centerField.value = this.value; //assign value to center input
     }
-
     function addDecimal(){
         var centerField = document.getElementById('operator');
-
         if (centerField.value == '') {
-            // target left input
-            var leftField = document.getElementById('leftOp');
-
-            // get button's value
-            var val = document.getElementById('decimal').value;
-
-            //start in the first input
-            leftField.value += this.value;
-
-
+            var leftField = document.getElementById('leftOp'); // target left input
+            var val = document.getElementById('decimal').value; // get button's value
+            leftField.value += this.value; //start in the first input
         } else if (centerField.value != ''){
             var rightField = document.getElementById('rightOp');
             var val2 = document.getElementById('decimal').value;
             rightField.value += this.value;
         }
     }
-
-    // clear all fields
     function clear(){
         document.getElementById('leftOp').value = '';
         document.getElementById('operator').value = '';
         document.getElementById('rightOp').value = '';
     }
-
-
-    //evaluate  equation and display result
     function evaluate(){
         var leftField = document.getElementById('leftOp');
         var num1 = document.getElementById('leftOp').value;
         var op = document.getElementById('operator').value;
         var num2 = document.getElementById('rightOp').value;
-
-        // var sum = parseFloat(num1.value) + eval(op.value) + parseFloat(num2.value);
-
         var sum = eval(num1 + op + num2);
-
         document.getElementById('leftOp').value = '';
         document.getElementById('rightOp').value = '';
-
         return leftField.value = sum.toFixed(2);
     }
 

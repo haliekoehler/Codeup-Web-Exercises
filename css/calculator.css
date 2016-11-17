@@ -1,65 +1,89 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron|Ropa+Sans');
 
-h1{
-    margin-left: 50px;
+body{
+    background-image: url('../img/Night-sky.jpg');
+    background-attachment: inherit;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 input{
-    height: 20px;
-    width: 50px;
+    height: 50px;
+    width: 100px;
     margin: 5px;
-    background-color: black;
-    color: white;
-    border: solid black 2px;
+    background-color: transparent;
+    color: lime;
+    border: none;
     font-family: 'Ropa Sans', sans-serif;
-    text-align: center;
-    font-size: 18px;
+    font-size: 40px;
 
 }
 
-p{
+h1{
     text-align: center;
     font-family: 'Orbitron', sans-serif;
-    color: limegreen;
+    font-weight: bolder;
+    color: #EEE;
     letter-spacing: 5px;
+    text-shadow: 10px 10px #000000;
 }
 
 .button{
     display: block;
-    width: 30px;
-    height: 20px;
-    padding: 5px 5px 20px 5px;
+    width: 35px;
+    height: 35px;
+    padding: 5px 5px 8px 5px;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 50%;
     float: left;
-    background-color: #9d9d9d;
-    margin: 5px;
+    background-color: #4f3073;
+    margin: 2px;
     font-family: 'Ropa Sans', sans-serif;
     font-size: 14px;
     font-weight: bolder;
+    color: antiquewhite;
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.6);
+    border: solid #60486f 2px;
+
 }
 
 .operator{
     background-color: #a44519;
     color: white;
+    border: solid #ad664b 2px;
 
+}
+
+#top-div{
+    width: 350px;
+    margin: 20px;
 }
 
 #main-container{
-    height: 300px;
-    width: 190px;
+    height: 250px;
+    width: 250px;
     background-image: url("../img/moon-texture.jpg");
     padding: 10px 30px 30px 30px;
-    margin: 50px;
-    border-radius: 20px;
+    margin: 80px 20px 20px 30px;
+    border-radius: 50%;
 }
 
 #buttonsDiv{
-    margin: 20px 10px 10px 10px;
+    margin: 40px 20px 40px 40px;
+    width: 325px;
 }
 
 #operator{
-    width: 25px;
+    width: 50px;
+    text-align: center;
+}
+
+#leftOp{
+    text-align: right;
+}
+
+#rightOp{
+    text-align: left;
 }
 
 #btn4{
@@ -74,12 +98,33 @@ p{
     clear: left;
 }
 
+#btnM{
+    padding: 5px 5px 0px 5px;
+    font-size: 20px;
+}
+
+#btnA, #btnS, #btnD{
+    font-size: 20px;
+}
+
 #btnE{
-    width: 150px;
+    width: 50px;
+    height: 50px;
+    background-color: lime;
+    color: black;
+    font-size: 45px;
+    padding: 0 0 45px 0;
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    clear: left;
+    border: solid #a0ff8d 2px;
+    margin: 5px 0 0 50px;
+
 }
 
 #inputFields{
-    margin: 10px 0 0 0;
-    background-color: black;
+    margin: 10px 0 0 20px;
+    background-color: transparent;
+    border: none;
 }
 
