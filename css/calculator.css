@@ -1,31 +1,39 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron|Ropa+Sans');
 
+@keyframes animatedBackground {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+}
+
 body{
+    position: relative;
     background-image: url('../img/Night-sky.jpg');
-    background-attachment: inherit;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-repeat: repeat-x;
+
+    animation: animatedBackground 90s linear infinite;
 }
 
 input{
     height: 50px;
-    width: 100px;
+    width: 300px;
     margin: 5px;
     background-color: transparent;
     color: lime;
     border: none;
     font-family: 'Ropa Sans', sans-serif;
     font-size: 40px;
+    text-align: center;
 
 }
 
 h1{
-    text-align: center;
+    margin: 30px 10px 10px 55px;
     font-family: 'Orbitron', sans-serif;
     font-weight: bolder;
     color: #EEE;
     letter-spacing: 5px;
-    text-shadow: 10px 10px #000000;
+    text-shadow: 10px 10px rgba(62, 255, 0, 0.12);
 }
 
 .button{
@@ -55,8 +63,8 @@ h1{
 }
 
 #top-div{
-    width: 350px;
-    margin: 20px;
+    width: 400px;
+    margin: 10px;
 }
 
 #main-container{
@@ -64,27 +72,21 @@ h1{
     width: 250px;
     background-image: url("../img/moon-texture.jpg");
     padding: 10px 30px 30px 30px;
-    margin: 80px 20px 20px 30px;
+    margin: 40px 20px 20px 45px;
     border-radius: 50%;
 }
 
 #buttonsDiv{
-    margin: 40px 20px 40px 40px;
-    width: 325px;
+    margin: 40px 20px 40px 45px;
+    width: 330px;
 }
 
 #operator{
     width: 50px;
-    text-align: center;
+    margin-left: 125px;
+
 }
 
-#leftOp{
-    text-align: right;
-}
-
-#rightOp{
-    text-align: left;
-}
 
 #btn4{
     clear: left;
@@ -123,8 +125,11 @@ h1{
 }
 
 #inputFields{
-    margin: 10px 0 0 20px;
+    margin: 10px 0 0 40px;
     background-color: transparent;
     border: none;
 }
 
+#extrasDiv{
+    margin: 100px 0 0 0;
+}

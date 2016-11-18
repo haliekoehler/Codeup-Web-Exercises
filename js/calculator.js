@@ -21,6 +21,7 @@
     var btnE = document.getElementById('btnE');
     var btnC = document.getElementById('btnC');
     var decimal = document.getElementById('decimal');
+    var sRoot = document.getElementById('sRoot');
 
     btn1.addEventListener('click', addDigit);
     btn2.addEventListener('click', addDigit);
@@ -39,6 +40,7 @@
     btnE.addEventListener('click', evaluate);
     btnD.addEventListener('click', addOp);
     decimal.addEventListener('click', addDecimal);
+    sRoot.addEventListener('click', squareRoot);
 
     function addDigit(){
         var centerField = document.getElementById('operator');
@@ -46,10 +48,10 @@
             var leftField = document.getElementById('leftOp'); // target left input
             var val = document.getElementsByClassName('button').value; // get button's value
             leftField.value += this.value; //start in the first input
-        } else if (centerField.value != ''){
-            var rightField = document.getElementById('rightOp');
-            var val2 = document.getElementsByClassName('button').value;
-            rightField.value += this.value;
+        } else if (centerField.value != ''){ // if operator input is occupied, go to right input
+            var rightField = document.getElementById('rightOp'); // target right input after operator
+            var val2 = document.getElementsByClassName('button').value; // get button's value
+            rightField.value += this.value; // place in second input
         }
     }
     function addOp(){
@@ -62,27 +64,36 @@
         if (centerField.value == '') {
             var leftField = document.getElementById('leftOp'); // target left input
             var val = document.getElementById('decimal').value; // get button's value
-            leftField.value += this.value; //start in the first input
+            leftField.value += this.value; // start in the first input
         } else if (centerField.value != ''){
-            var rightField = document.getElementById('rightOp');
-            var val2 = document.getElementById('decimal').value;
-            rightField.value += this.value;
+            var rightField = document.getElementById('rightOp'); // target right input
+            var val2 = document.getElementById('decimal').value; // get button's value
+            rightField.value += this.value; // place in second input
         }
     }
-    function clear(){
+    function clear(){ //clears all three inputs
         document.getElementById('leftOp').value = '';
         document.getElementById('operator').value = '';
         document.getElementById('rightOp').value = '';
     }
     function evaluate(){
-        var leftField = document.getElementById('leftOp');
-        var num1 = document.getElementById('leftOp').value;
-        var op = document.getElementById('operator').value;
-        var num2 = document.getElementById('rightOp').value;
-        var sum = eval(num1 + op + num2);
-        document.getElementById('leftOp').value = '';
-        document.getElementById('rightOp').value = '';
-        return leftField.value = sum.toFixed(2);
+        var leftField = document.getElementById('leftOp'); // target left field, where sum will be returned
+        var num1 = document.getElementById('leftOp').value; // target first result
+        var op = document.getElementById('operator').value; // target operator
+        var num2 = document.getElementById('rightOp').value; // target second result
+        var sum = eval(num1 + op + num2); // calculate value from first input and second input based on operator
+        document.getElementById('leftOp').value = ''; // clear first input after eval
+        document.getElementById('rightOp').value = ''; // clear second input after eval
+        return leftField.value = sum.toFixed(2); // return sum in first input box & keep the operator
     }
 
+
+    function squareRoot(){
+        var leftField = document.getElementById('leftOp'); //target left field
+        var number = document.getElementById('leftOp').value; // get value from left field
+        var sRoot = Math.sqrt(number); // find square root of number
+        document.getElementById('leftOp').value = '';
+        document.getElementById('operator').value = '';
+        return leftField.value = sRoot.toFixed(2); // return square root into left input
+    }
 }());
