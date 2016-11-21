@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Maps API</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+<head>
+    <h1>Google Maps API Testing... Testing... 1, 2, 3...</h1>
+    <style type="text/css">
+        #map-canvas {
+            width: 770px;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="map-canvas"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaebneocP-VowOV5QRoBGb1HxClfyEfeY"></script>
+
+
+<script type="text/javascript">
+    (function () {
+        "use strict";
+
+        // Set our map options
+        var mapOptions = {
+            // Set the zoom level
+            zoom: 12,
+
+            // This sets the center of the map at our location
+            center: {
+                lat: 39.689752,
+                lng: -104.982988
+            }
+        };
+
+        // Render the map
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+
+
+        var restaurants = [
+            {   name: 'John Holly\'s Asian Bistro',
+                address: '2422 S Downing St, Denver, CO, 80210',
+                lat: 39.672634,
+                lng: -104.973186,
+                content: 'John Holly\'s is a prime spot for fresh sushi (and lots of sake).',
+                image: 'img/sushiicon.png'
+            },
+            {   name: 'Saigon Bowl',
+                address: '333 S Federal Blvd #134, Denver, CO, 80219',
+                lat: 39.711343,
+                lng: -105.025566,
+                content: 'Vietnamese! Huge menu, quality good.',
+                image: 'img/noodlebowl.png'
+            },
+            {
+                name: 'City O\' City',
+                address: '206 E 13th Ave, Denver, CO, 80203',
+                lat: 39.737538,
+                lng: -104.984570,
+                content: 'High concept vegetarian fare',
+                image: 'img/vegan_symbol1600.png'
+            }
+        ];
+
+
+        restaurants.forEach(function(restaurant, index) {
+            var location = {lat: restaurant.lat, lng: restaurant.lng};
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                icon: restaurant.image,
+                animation:google.maps.Animation.DROP
+            });
+
+
+            google.maps.event.addListener(marker, 'click', function () {
+                var infoWindow = new google.maps.InfoWindow({content: '<h3>' + restaurant.name + '</h3>' + '<br>' + restaurant.content});
+                infoWindow.open(map, marker);
+
+            })
+        })
+    })();
+
+
+</script>
+</body>
+</html>
