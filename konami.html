@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konami Code</title>
+</head>
+<body>
+    <h1>Konami Code</h1>
+
+    <script src="js/jquery-2.2.4.js"></script>
+
+    <script>
+        "use strict";
+
+        $(document).keyup(function(event){
+            console.log(event.keyCode);
+        });
+
+
+
+        // keys for konami code
+        var konamiKeys = {
+            38 : 'up',
+            40 : 'down',
+            37 : 'left',
+            39 : 'right',
+            66 : 'b',
+            65 : 'a',
+            13 : 'enter'
+        };
+
+        //proper order of konami code
+        var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a', 'enter'];
+
+        //position to start in code
+        var position = 0;
+
+
+        //add key down events
+        $(document).keyup(function(event){
+
+            // get value of key
+            var key = konamiKeys[event.keyCode];
+
+            // get value of required key from konami code
+            var correctKey = konamiCode[position];
+
+            // compare key pressed with required key
+            if (key === correctKey){
+                // move to next required key
+                position++;
+                konamiCode++;
+                console.log(position);
+                console.log(konamiCode);
+
+            } if (key === konamiCode.length){
+                // if done in correct order, activate
+                console.log('Success!')
+
+            } else {
+                // if failed, start back at beginning
+                position = 0;
+                console.log('FAIL. TRY AGAIN')
+
+            }
+
+
+
+        })
+
+
+        for
+
+
+    </script>
+</body>
+</html>

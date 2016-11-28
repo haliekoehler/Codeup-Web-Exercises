@@ -5,18 +5,49 @@
     <title>jQuery Exercises</title>
 </head>
 <body>
-<h1>This is a header</h1>
-<div>
-    text here
+<h1 id="main-header" class="codeup">This is a header</h1>
+<div id="div1" class="codeup">
+    <h2 class="header">This is a smaller header</h2>
+    <p class="info">Some random filler text here...</p>
 </div>
-<div>
-    text here
+<div id="div2" class="codeup">
+    <p class="info">This is a list of stuff</p>
+    <ul id="firstList" class="list block-section">
+        <li id="item1">First</li>
+        <li id="item2">Second</li>
+        <li id="item3">Third</li>
+    </ul>
 </div>
 </body>
 <script src="js/jquery-2.2.4.js"></script>
 <script>
     $(document).ready(function() {
-        alert( 'The DOM has finished loading!' );
+
+        $('h1').click(function() {
+            $('h1').css('background-color', 'yellow')
+                }
+        );
+
+        $('p').dblclick(function() {
+            $('p').css('font-size', '18px')
+        });
+
+        $('li').hover(
+                function(){
+                    $(this).css('color', 'red')
+                },
+                function(){
+                    $(this).css('color', 'white')
+                }
+        );
+
+//        $('h2').toggle(
+//                function(){
+//            $(this).css('background-color', 'green');
+//                }, function(){
+//            $(this).css('background-color', 'black');
+//                }
+//        )
     });
 </script>
 </html>
