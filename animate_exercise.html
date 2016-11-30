@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animate</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Bungee');
+
+        html, body {
+            margin: 0px;
+            padding: 20px;
+            background-image: url('img/black_thread_@2X.png');
+        }
+
+        h1{
+            text-align: center;
+            color: antiquewhite;
+            font-family: 'Bungee', cursive;
+            font-size: 40px;
+            letter-spacing: 10px;
+        }
+
+        p{
+            text-align: center;
+        }
+
+        button{
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            padding: 5px;
+            margin: 5px;
+        }
+        #btn-animate {
+            margin: 15px;
+        }
+
+        #animate-box {
+            /*background-color: #000033;*/
+            background-image: url('img/black_thread.png');
+            height: 250px;
+            margin: 15px;
+            position: relative;
+            width: 250px;
+            border: 1px dashed antiquewhite;
+            box-shadow: 10px 5px 5px black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Moving Box</h1>
+    <p>
+        <button id="btn-move">Move It</button>
+        <button id="btn-scale">Scale It</button>
+        <button id="btn-hide">Hide It</button>
+        <button id="btn-show">Show It</button>
+        <button id="btn-all">Animate All</button>
+    </p>
+
+    <div id="animate-box"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        "use strict";
+
+        var originalPosition = $('#animate-box').animate({
+            left: '0'
+        }, 100)
+
+        // TODO: "Move It" should move the box 100 pixels to the left
+
+        $('#btn-move').click(function () {
+            $('#animate-box').animate({
+                left: "+=100"
+            }, 1000);
+        });
+
+        // TODO: "Scale It" should expand the box width by 50%
+
+        $('#btn-scale').click(function () {
+            $('#animate-box').animate({
+                width: "+=5%"
+            }, 1000);
+        });
+
+        // TODO: "Hide It" should use opacity to make the box invisible
+
+        $('#btn-hide').click(function () {
+            $('#animate-box').hide()
+        });
+
+        // TODO: "Show It" should make the box appear
+
+        $('#btn-show').click(function () {
+            $('#animate-box').show()
+        });
+
+        // TODO: "Animate All" should use an animation stack to:
+
+        $('#btn-all').click(function () {
+            $('#animate-box').animate({
+                left: "+=100",
+                width: "+=5%"
+            }, 2000, function(){
+                $('#animate-box').hide()
+            });
+            $('#animate-box').animate({
+                left: "-=100",
+                width: '-=5%'
+            }, 500, function(){
+                $('#animate-box').show()
+            });
+            $('#animate-box').fadeOut(100);
+            $()
+        })
+    });
+            //      1) Move and scale the box simultaneously
+            //      2) Hide the box
+            //      3) Reset the box back to its original position and opacity
+
+    </script>
+</body>
+</html>
