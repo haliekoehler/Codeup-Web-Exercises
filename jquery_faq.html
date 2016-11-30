@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery FAQs</title>
+    <style>
+
+        .invisible{
+            display : none;
+        }
+
+    </style>
+</head>
+<body>
+<div id="faqList">
+<h1 id="nationalParksToggle">National Parks : Not-So-Frequently Asked Questions</h1>
+    <dl>
+        <dt>What river carved the Grand Canyon?</dt>
+        <dd class="invisible">Colorado River</dd>
+        <dt>What is the longest cave system in the world? Where is it located?</dt>
+        <dd class="invisible">Mammoth Cave, Kentucky</dd>
+        <dt>Where is "Old Faithful" located?</dt>
+        <dd class="invisible">Yellowstone National Park</dd>
+        <dt>Where can I find calcite fin formations like "boxwork" and "frostwork"?</dt>
+        <dd class= "invisible">Wind Cave National Park</dd>
+        <dt></dt>
+        <dd class= "invisible"></dd>
+        <dt></dt>
+        <dd class= "invisible"></dd>
+        <dt></dt>
+        <dd class= "invisible"></dd>
+        <dt></dt>
+        <dd class= "invisible"></dd>
+        <dt></dt>
+        <dd class= "invisible"></dd>
+        <dt></dt>
+        <dd class= "invisible"></dd>
+        <dt></dt>
+        <dd class= "invisible"></dd>
+        <dt></dt>
+        <dd class= "invisible"></dd>
+        <dt></dt>
+    </dl>
+</div>
+<hr>
+<div>
+    <h3 class="factsToggle">Olympic National Park</h3>
+    <ul>
+        <li>Located on Washington's Olympic Peninsula</li>
+        <li>Established June 29, 1938</li>
+        <li>Area of 922,650 acres</li>
+        <li>Nearest City is Port Angeles, Washington</li>
+    </ul>
+    <h3 class="factsToggle">Petrified Forest National Park</h3>
+    <ul>
+        <li>Located in northeastern Arizona</li>
+        <li>Established in 1962</li>
+        <li>Area of 146,930 acres</li>
+        <li>Nearest City is Holbrook, Arizona</li>
+    </ul>
+    <h3 class="factsToggle">Zion National Park</h3>
+    <ul>
+        <li>Located in Utah</li>
+        <li>Established November 19, 1919</li>
+        <li>Area of 146,597 acres</li>
+        <li>Nearest City is Springdale, Utah</li>
+    </ul>
+</div>
+
+</body>
+
+<script src="js/jquery-2.2.4.js"></script>
+
+<script>
+    "use strict";
+
+    $(document).ready(function(){
+
+
+        $('#nationalParksToggle').click(function(){
+            $('.invisible').slideToggle('superFast');
+        });
+
+
+        $('ul > li:first-child').css('font-weight', 'bold');
+
+        $('.factsToggle').click(function(){
+            $('li').slideToggle('fast');
+        });
+
+
+//        $('li').click(function(){
+//            $(this).parent().toggleClass('invisible');
+//        });
+
+//        $('dt').click(function(){
+//            $('dd').toggleClass('invisible');
+//        });
+
+
+
+    })
+
+
+
+</script>
+</html>

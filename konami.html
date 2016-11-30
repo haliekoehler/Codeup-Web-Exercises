@@ -3,73 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <title>Konami Code</title>
+    <style>
+        body{
+            background-color: lightgrey;
+        }
+        h1{
+            text-align: center;
+            border: 2px dashed black;
+            margin: 50px;
+            padding: 50px;
+            font-size: 44px;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Konami Code</h1>
+<canvas id ='canv'>
 
+    <h1>Konami Code?</h1>
+
+</canvas>
     <script src="js/jquery-2.2.4.js"></script>
 
     <script>
         "use strict";
+//
+//        $(document).keyup(function(event){
+//            console.log(event.keyCode);
+//        });
 
-        $(document).keyup(function(event){
-            console.log(event.keyCode);
-        });
-
-
-
-        // keys for konami code
-        var konamiKeys = {
-            38 : 'up',
-            40 : 'down',
-            37 : 'left',
-            39 : 'right',
-            66 : 'b',
-            65 : 'a',
-            13 : 'enter'
+        // a key map of allowed keys
+        var allowedKeys = {
+            37: 'left',
+            38: 'up',
+            39: 'right',
+            40: 'down',
+            65: 'a',
+            66: 'b',
+            13: 'enter'
         };
 
-        //proper order of konami code
+        // the 'official' Konami Code sequence
         var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a', 'enter'];
 
-        //position to start in code
-        var position = 0;
+        // a variable to remember the 'position' the user has reached so far.
+        var konamiCodePosition = 0;
 
+        // add keydown event listener
+        $(document).keyup(function(e){
+            // get the value of the key code from the key map
+            var key = allowedKeys[e.keyCode];
+            // get the value of the required key from the konami code
+            var requiredKey = konamiCode[konamiCodePosition];
 
-        //add key down events
-        $(document).keyup(function(event){
+            // compare the key with the required key
+            if (key == requiredKey) {
 
-            // get value of key
-            var key = konamiKeys[event.keyCode];
+                // move to the next key in the konami code sequence
+                konamiCodePosition++;
+                console.log(konamiCodePosition);
+                // if the last key is reached, activate cheats
+                if (konamiCodePosition == konamiCode.length)
+                    activateCheat();
+            } else
+                konamiCodePosition = 0;
+        });
 
-            // get value of required key from konami code
-            var correctKey = konamiCode[position];
+        function activateCheat() {
 
-            // compare key pressed with required key
-            if (key === correctKey){
-                // move to next required key
-                position++;
-                konamiCode++;
-                console.log(position);
-                console.log(konamiCode);
+            var c = document.getElementById('canv');
+            var $ = c.getContext('2d');
+            document.body.clientWidth;
+            var wh = 128;
+            var w2h = wh * wh;
+            c.width = c.height =  wh;
+            var img = $.createImageData(wh, wh);
+            var id = img.data;
+            var t = 0;
+            var inc = 1 / wh;
+            var arr = [];
 
-            } if (key === konamiCode.length){
-                // if done in correct order, activate
-                console.log('Success!')
+            for(var k = 0; k < w2h; ++k)
+                arr[k] = Math.random() * 1.5 - 0.5;
 
-            } else {
-                // if failed, start back at beginning
-                position = 0;
-                console.log('FAIL. TRY AGAIN')
+            function draw(){
+                window.requestAnimationFrame(draw);
+                t += inc;
+                for(var x = 1; x >= 0; x -= inc) {
+                    for(var y = 1; y >= 0; y -= inc) {
+                        var idx = (y * wh + x) * wh * 4;
+                        var dx = x;
+                        var dy = y;
+                        var dist = Math.sqrt(dx * dx + dy * dy);
+                        var ax = oct(x, y);
+                        var ay = oct(x + 2, y + t / 3);
+                        var bx = oct(x + dist * .3 + ax / 22 + 0.7, y + ay / 5 + 2);
+                        var by = oct(x + ax / 3 + 4 * t, y + ay / 3 + 5);
+                        var n = oct(x + bx / 5, y + by / 2) * 0.7 + .15;
+                        var d = ax * by / 2;
+                        var e = ay * bx / 2;
 
+                        id[idx + 0] = hue(n + d / 5);
+                        id[idx + 1] = hue(n / 3 + e / 5 + d);
+                        id[idx + 2] = hue(d + e);
+                        id[idx + 3] = hue(1 - ease(dist) * (e + d) * 5)
+                    }
+                }
+                $.putImageData(img, 0, 0);
             }
+            function hue($) {
+                return 255 * Math.min(Math.max($, 0), 1);
+            }
+            function ease(x) {
+                return (x > 0.2) ? 0 : i(1, 0, x * 6);
+            }
+            var db = document.body;
+            function i($, db, t) {
+                t = t * t * t * (6 * t * t - 15 * t + 10);
+                return $ + (db - $) * t;
+            }
+            function n(x, y) {
+                var i = Math.abs(x * wh + y) % w2h;
+                return arr[i];
+            }
+            function oct(x, y) {
+                var o1 = p(x * 3.0, y * 4.0);
+                var o2 = p(x * 4.0, y * 5.0);
+                return o1 + o2 * 0.5;
+            }
+            function p(x, y) {
+                var nx = Math.floor(x);
+                var ny = Math.floor(y);
+                return i(i(n(nx, ny), n(nx + 1, ny), x - nx), i(n(nx, ny + 1), n(nx + 1, ny + 1), x - nx), y - ny);
+            }
+            draw();
+
+            $('body').css({'width': '100%', 'margin': '0', 'overflow': 'hidden', 'background': 'hsal(0,0%,0%,1)'})
+            $('canvas').css({'width': '100%', 'height': '100vh', 'margin': '0', 'background': 'hsla(0,0%,0%,1)'});
+
+
+            alert("cheats activated");
+        }
 
 
 
-        })
 
 
-        for
+
+
+
+
+//
+//         keys for konami code
+//        var konamiKeys = {
+//            38 : 'up',
+//            40 : 'down',
+//            37 : 'left',
+//            39 : 'right',
+//            66 : 'b',
+//            65 : 'a',
+//            13 : 'enter'
+//        };
+//
+//        //proper order of konami code
+//        var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a', 'enter'];
+//
+//
+//        //position to start in code
+//        var position = 0;
+//
+//
+//        //add key down events
+//        $(document).keyup(function(e){
+//
+//            // get value of key
+//            var key = konamiKeys[e.keyCode];
+//
+//            // get value of required key from konami code
+//            var correctKey = konamiCode[position];
+//
+//            // compare key pressed with required key
+//            if (key == correctKey){
+//                // move to next required key
+//                position++;
+//
+//            } if (key == konamiCode.length){
+//                // if done in correct order, activate
+//                console.log('Success!');
+//                activateCheat()
+//
+//            } else {
+//                // if failed, return to beginning
+//                position = 0;
+//                console.log('FAIL. TRY AGAIN')
+//            }
+//        });
+
+
 
 
     </script>
