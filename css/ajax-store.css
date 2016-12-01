@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Rokkitt');
+
+body{
+    background-color: #ceccd6;
+}
+
+
+h1{
+    text-align: center;
+    font-family: 'Rokkitt', serif;
+    font-size: 50px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    text-shadow: 2px 4px aliceblue;
+}
+
+table{
+    border: 1px solid black;
+    padding: 50px;
+    margin: 10px;
+}
+
+th{
+    padding: 10px;
+    text-align: center;
+    background-color: #414c51;
+    color: #d4ffe6;
+    font-family: 'Rokkitt', serif;
+    letter-spacing: 4px;
+    font-size: 16px;
+    text-shadow: 2px 2px black;
+}
+
+td{
+    padding: 15px;
+    border: 1px solid black;
+    margin: 10px;
+    font-size: 12px;
+    width: 150px;
+    background-color: aliceblue;
+}
+
+#reset{
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    font-family: 'Rokkitt', serif;
+    font-weight: bold;
+    font-size: 16px;
+    font-weight: bolder;
+    letter-spacing: 4px;
+}
+
+tr > td:first-child{
+    font-weight: bolder;
+    background-color: #cbecfb;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
