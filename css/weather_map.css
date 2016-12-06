@@ -1,0 +1,19 @@
+.weather-block{
+    border: 1px solid black;
+}
+
+.dayDiv{
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10%;
+    float: left;
+    padding: 30px;
+}
+
+.jumbotron{
+    text-indent: 50px;
+}
+
+.container-fluid{
+    margin-left: 40px;
+}
