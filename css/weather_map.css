@@ -1,51 +1,102 @@
-@keyframes animatedBackground {
-    from { background-position: 0 0; }
-    to { background-position: 100% 0; }
-}
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
 
 body {
-    background-image: url('../img/pexels-clouds.jpg');
-    background-size: cover;
-    /*background-repeat: repeat-x;*/
-    background-position: bottom;
-    /*animation: animatedBackground 100s linear infinite;*/
+    overflow: hidden;
 }
 
-h3 {
-
+label {
+    color: aliceblue;
 }
 
+strong {
+    color: darkblue;
+}
+
+p {
+    color: aliceblue;
+    margin: 4px;
+}
 .dateText {
     background-color: aliceblue;
-    padding: 5px;
+    margin: 0 0 5px 0;
+    padding: 3px;
     border-radius: 10px;
-}
-
-.weather-block {
-    border: 1px solid black;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: bolder;
 }
 
 .dayDiv {
-    border: 1px solid black;
-    border-radius: 10%;
+    border: 1px solid rgba(27, 109, 133, 0.7);
+    border-radius: 10px;
     margin: 3px;
-    width: 300px;
-    padding: 10px;
-    /*float: left;*/
+    padding: 5px;
+    width: 200px;
+}
+
+#forecastDiv > .dayDiv:first-child {
+    width: 250px;
+    background-color: rgba(27, 109, 133, 0.7);
+    border-radius: 10px;
+    margin: 3px;
+    padding: 5px;
+}
+
+#forecastDiv > .dayDiv:first-child > .dateText {
+    font-size: 18px;
+    padding: 5px;
 }
 
 #main-header {
     text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 60px;
 }
 
 #map-canvas {
-    background-color: rgba(27, 109, 133, 0.8);
-    width: 80%;
-    height: 500px;
-    padding: 20px;
+    height: 100%;
+    position: absolute;
+    top: 100px;
+    bottom: -200px;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+
+#forecastDiv {
+    padding: 2px;
+    height: 100%;
+    /*overflow: auto;*/
+}
+
+#float-content{
+    z-index: 100;
+    position: relative;
 }
 
 #weatherDiv {
-    background-color: rgba(27, 109, 133, 0.8);
-    padding: 10px;
+    position: fixed;
+    background-color: rgba(27, 109, 133, 0.2);
+    max-width: 250px;
+    top: 100px;
+    bottom: auto;
+}
+
+#locationHeader {
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 1px 1px #000;
+    background-color: rgba(27, 109, 133, 0.7);
+    padding: 5px;
+    font-family: 'Titillium Web', sans-serif;
+    color: white;
+    font-weight: bolder;
+    border-radius: 10px;
+    width: 250px;
+}
+
+#numberOfDays {
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+    letter-spacing: 3px;
+    font-weight: bolder;
 }
