@@ -1,19 +1,51 @@
-.weather-block{
+@keyframes animatedBackground {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+}
+
+body {
+    background-image: url('../img/pexels-clouds.jpg');
+    background-size: cover;
+    /*background-repeat: repeat-x;*/
+    background-position: bottom;
+    /*animation: animatedBackground 100s linear infinite;*/
+}
+
+h3 {
+
+}
+
+.dateText {
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.weather-block {
     border: 1px solid black;
 }
 
-.dayDiv{
-    margin: 10px;
+.dayDiv {
     border: 1px solid black;
     border-radius: 10%;
-    float: left;
-    padding: 30px;
+    margin: 3px;
+    width: 300px;
+    padding: 10px;
+    /*float: left;*/
 }
 
-.jumbotron{
-    text-indent: 50px;
+#main-header {
+    text-align: center;
 }
 
-.container-fluid{
-    margin-left: 40px;
+#map-canvas {
+    background-color: rgba(27, 109, 133, 0.8);
+    width: 80%;
+    height: 500px;
+    padding: 20px;
+}
+
+#weatherDiv {
+    background-color: rgba(27, 109, 133, 0.8);
+    padding: 10px;
 }

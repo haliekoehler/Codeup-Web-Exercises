@@ -8,44 +8,56 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaebneocP-VowOV5QRoBGb1HxClfyEfeY"></script>
 </head>
 <body>
 
 
+
+<div class="container">
 <!--Main header-->
-<h1 id="main-header" class="jumbotron">Weather Application</h1>
+    <h1 id="main-header" class="jumbotron">Weather Application</h1>
 
-
-
-
-<div class="container-fluid">
-
-    <h3 id="locationHeader"><span id="cityName"></span> <span id="dayCount"></span>-day Forecast</h3>
-
-    <!--div for weather forecast-->
-    <div id="weatherDiv" class="row">
-
+    <div id="weather-header" class="container">
+        <h3 id="locationHeader"><span id="cityName"></span> <span id="dayCount"></span>-day Forecast</h3>
+        <!-- City, State Field & Button-->
+        <div id="cityStateDiv" class="container">
+            <label for="cityState">City, State: </label>
+            <input id="cityState" type="text" name="city">
+            <button id="cityStateBtn" class="btn">Change Location by City</button>
+        </div>
     </div>
 
+    <!--div for weather forecast-->
+    <div id="weatherDiv" class="container center-block">
+
+
+
+        <!-- Map Canvas -->
+        <div id="map-canvas"></div>
+    </div>
+
+
+    <!--&lt;!&ndash;Long / Lat Fields & Button&ndash;&gt;-->
+    <!--<div id="latLongDiv" class="container center-block">-->
+        <!--<label for="lat">Latitude: </label>-->
+        <!--<input id="lat" type="number" name="lat">-->
+        <!--<label for="long">Longitude: </label>-->
+        <!--<input id="long" type="number" name="long">-->
+        <!--<button id="latLongBtn " class="btn">Change Location by Coordinates</button>-->
+    <!--</div>-->
+
+
+
+
+
+
+
+
 </div>
 
 
-<!--Long / Lat Fields & Button-->
-<div id="latLongDiv" class="container">
-    <label for="lat">Latitude: </label>
-    <input id="lat" type="number" name="lat">
-    <label for="long">Longitude: </label>
-    <input id="long" type="number" name="long">
-    <button id="latLongBtn" class="btn">Change Location by Coordinates</button>
-</div>
 
-<!-- City, State Field & Button-->
-<div id="cityStateDiv" class="container">
-    <label for="cityState">City, State: </label>
-    <input id="cityState" type="text" name="city">
-    <button id="cityStateBtn" class="btn">Change Location by City</button>
-</div>
 <script src="js/weather_map.js"></script>
-
 </body>
 </html>
