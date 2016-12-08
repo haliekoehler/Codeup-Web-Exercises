@@ -25,7 +25,7 @@ weatherData.done(function (data) {
     // do this for each day
     var days = '';
 
-    data.list.forEach(function (obj) {
+   data.list.forEach(function (obj) {
         days +=
             "<div class='dayDiv'>"
             + "<h5 class='dateText'>" + moment.unix(obj.dt).format("dddd, MMM-DD-YYYY") + "</h5>"
