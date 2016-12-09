@@ -90,6 +90,7 @@ var mapOptions = {
         lat: 29.42412,
         lng: -98.493629
     },
+    mapTypeId: 'terrain',
     mapTypeControl: true,
     mapTypeControlOptions: {
         style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,

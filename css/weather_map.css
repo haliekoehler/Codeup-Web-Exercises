@@ -63,8 +63,8 @@ p {
 
 #forecastDiv {
     padding: 2px;
-    height: 100%;
-    /*overflow: auto;*/
+    height: 100vh;
+    width: 300px;
 }
 
 #float-content{
@@ -99,3 +99,8 @@ p {
     letter-spacing: 3px;
     font-weight: bolder;
 }
+
+/*#headerDiv {*/
+    /*width: 100vw;*/
+    /*height: 100px;*/
+/*}*/
