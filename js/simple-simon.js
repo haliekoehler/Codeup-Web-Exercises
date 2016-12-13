@@ -1,35 +1,13 @@
 'use strict';
 
-
+var counter = 0;
 var compArray = [];
-// var userArray = [];
+// var interval;
 var level = 0;
 var tiles = $('.tile');
 var active = true;
 // var mode = normal;
 
-
-
-// ----- BUTTON CLICK EVENTS
-
-    // $('#startBtn').click(function () {
-    //     startGame();
-    //     console.log('Start Button works!')
-    // });
-
-
-    // PROB DON'T NEED BUT NOT DELETING YET ~~~~~~~~~~~~~~~~~~~~~~~~~
-    // $('.tile').click(function () {
-    //     flashTile(this);
-    //     return this
-    // });
-
-    // $('#randomTest').click(function () {
-    //     var tile = randomTile();
-    //     compArray.push($(tile).attr('id'));
-    //     flashTile(tile);
-    //     console.log(compArray);
-    // });
 
 // ----- START GAME
     function startGame() {
@@ -37,114 +15,132 @@ var active = true;
         // userArray = [];
         level = 0;
         flashAll(0);
-        function flashAll(index) {
-            if(tiles.length > index) {
-                setTimeout(function() {
-                    flashTile(tiles[index]);
-                    flashAll(++index);
-                }, 50);
-            }
-        }
         $('#levelCnt').text(" " + ++level);
         // change game text
-        $('#gameText').text('Watch for Simon\'s Selection!');}
+        $('#gameText').text('Watch for Simon\'s Selection!');
+    } // end of startGame()
 
 
 // ----- RANDOM NUMBER BETWEEN 0 - 3
     function randomNumber() {
         return Math.floor((Math.random() * 4));
-    }
+    } // end of randomNumber()
+
 
 // ----- FLASH TILE
     function flashTile(tile) {
-        $(tile).fadeOut(50).fadeIn(100);
-    }
+        $("#" + tile).addClass("active");
+        setTimeout(function() {
+            $("#" + tile).removeClass("active");
+        }, 250);
+    } // end of flashTile
+
+
+// ----- FLASH ALL TILES
+    function flashAll(index) {
+        if(tiles.length > index) {
+            var tile = tiles[index];
+            setTimeout(function() {
+                flashTile($(tile).attr('id'));
+                flashAll(++index);
+            }, 50);
+        }
+    } // end of flashAll()
+
 
 // ----- RANDOM TILE SELECTION
     function randomTile() {
         return tiles[randomNumber()];
-    }
+    } // end of randomTile()
+
+
+// ----- COMP. PLAY-BACK
+function playBack(array) {
+    var i = 0;
+    var interval = setInterval(function(){
+        var tile = array[i];
+        flashTile(tile);
+        i++;
+        if (i >= array.length){
+            clearInterval(interval);
+        }
+    }, 1000)
+} // end of playBack()
+
 
 // ----- COMPUTER SELECTION / BUILD
     function compBuild() {
         var tile = randomTile();
         compArray.push($(tile).attr('id'));
-        flashTile(tile);
-        console.log(compArray);
-    }
-
-// ----- COMP. PLAY-BACK
-    function playBack() {
-        compArray.forEach(function (element) {
-            flashTile(element)
-        })
-    }
-
-// // ----- USER SELECTION / BUILD
-//     function userBuild(tile) {
-//         userArray.push($(tile).attr('id'));
-//         flashTile(tile);
-//         console.log(userArray);
-//     }
+        // flashTile(tile);
+        // console.log(compArray);
+        playBack(compArray);
+        userTurn();
+    } // end of compBuild()
 
 // ----- USER TURN
     function userTurn() {
         $('#gameText').text('Your Turn! Repeat the sequence for Simon!');
+        // activateBoard();
 
-        activateBoard();
-        console.log(compArray);
+    } // end of userTurn()
 
-        $('.tile').click(function () {
-            flashTile(this);
-            var userInput = [$(this).attr('id').toString()];
-            console.log(userInput);
-            compare(userInput);
-
-            // console.log('User Array: ' + userArray);
-
-            // return userArray
-
-
-        });
-    }
-
-// ----- COMPARE
-    function compare(object) {
-        if (object === compArray) {
+    $('.tile').click(function () {
+        var userInput = $(this).attr('id');
+        flashTile('' + userInput+ '');
+        if (userInput == compArray[counter]) {
+            console.log(counter);
             console.log('match');
-            // newLevel();
+            counter += 1;
+            console.log(compArray.length);
+            if (counter == compArray.length) {
+                console.log('Full Sequence Match!');
+                counter = 0;
+                setTimeout(function () {
+                    newLevel();
+                }, 500);
+            }
         } else {
-            console.log(compArray);
-            console.log('Something Went wrong');
+            endGame();
+            console.log('Something Went Wrong');
         }
-    }
+    });
+
+// ----- COMPARE TO COMPUTER ARRAY
+//     function compare(object){
+//
+//     } // end of compare()
+
 
 // ----- NEW LEVEL
     function newLevel() {
-        alert('Correct! Next Level!');
-        $('#levelCnt').text(" " + ++level);
+        $("#gameText").text('Correct! Next Level!');
+        ($('#levelCnt').text(" " + ++level));
+        flashAll(0);
+        compBuild();
+    } // end of newLevel()
 
-    }
 
 // ----- ACTIVATE BOARD FOR USER TURN
-    function activateBoard() {
-        active = true;
-        $('.tile').on('click');
-        console.log('Board is now Activated')
-    }
+//     function activateBoard() {
+//         active = true;
+//         $('.tile').on('click');
+//         console.log('Board is now Activated')
+//     } // end of activateBoard()
+
 
 // ----- DEACTIVATE BOARD FOR COMPUTER TURN
-    function deactivateBoard() {
-        active = false;
-        $('.tile').off('click');
-        console.log('Board not-active');
-    }
+//     function deactivateBoard() {
+//         active = false;
+//         $('.tile').off('click');
+//         console.log('Board not-active');
+//     } // end of deactivateBoard
+
 
 // ----- GAME OVER, GO HOME
     function endGame() {
         alert('WRONG!');
-
-    }
+    } // end of endGame();
 
 
 
@@ -156,11 +152,9 @@ $(document).ready(function () {
 
         startGame();
 
-        deactivateBoard();
+        // deactivateBoard();
 
-        setTimeout(compBuild, 2000);
-
-        setTimeout(userTurn, 3000);
+        compBuild();
 
     });
 

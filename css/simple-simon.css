@@ -37,6 +37,11 @@ p {
     width: 180px;
     float: left;
     margin: 6px;
+    opacity: .5;
+}
+
+.active {
+    opacity: 1;
 }
 
 #red {
