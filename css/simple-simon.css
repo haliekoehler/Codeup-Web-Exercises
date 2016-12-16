@@ -1,31 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body{
+    background-image: url('../img/southpark_busstop.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 h1 {
-  text-align: center;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    font-size: 48px;
+    letter-spacing: 3px;
 }
 
 h2 {
-    text-align: center;
+    margin-left: 175px;
+    font-family: 'Roboto', sans-serif;
+    max-width: 400px;
 }
 
 p {
     text-align: center;
-}
-
-.btn {
-    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    font-size: 30px;
+    text-shadow: 1px 1px rgba(225, 225, 225, .5);
 }
 
 #gameContainer {
-    background-color: black;
-    box-sizing: border-box;
-    height: 400px;
-    width: 400px;
+    /*background-color: black;*/
+    /*box-sizing: border-box;*/
+    height: 250px;
+    width: 900px;
     margin: auto;
-    border-radius: 50px;
+    border-radius: 50%;
     padding: 7px;
-}
-
-#tileContainer {
-
 }
 
 .illuminate {
@@ -33,33 +45,62 @@ p {
 }
 
 .tile {
-    height: 180px;
-    width: 180px;
+    height: 200px;
+    width: 200px;
     float: left;
     margin: 6px;
-    opacity: .5;
+    opacity: .6;
+}
+
+.btn {
+    height: 40px;
+    width: 200px;
+    padding: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: bolder;
+    margin-left: 150px;
+    margin-top: 20px;
 }
 
 .active {
     opacity: 1;
 }
+#btnDiv{
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+
+#levelDiv {
+    margin: 0 auto;
+    border: 1px solid whitesmoke;
+    max-width: 500px;
+    background-color: rgba(225, 225, 225, .5);
+    font-size: 24px;
+}
 
 #red {
-    background-color: red;
-    border-radius: 50px 0 0 0;
+    background-image: url('../img/Cartman_Head.png');
+    /*background-color: red;*/
+    /*border-radius: 100% 0 0 0;*/
 }
 
 #blue {
-    background-color: blue;
-    border-radius: 0 50px 0 0;
+    background-image: url('../img/Stan_Head.png');
+    /*background-color: blue;*/
+    /*border-radius: 0 100% 0 0;*/
 }
 
 #green {
-    background-color: green;
-    border-radius: 0 0 0 50px;
+    background-image: url('../img/Kyle_Head.png');
+    /*background-color: green;*/
+    /*border-radius: 0 0 0 100%;*/
 }
 
 #yellow {
-    background-color: yellow;
-    border-radius: 0 0 50px 0;
+    background-image: url('../img/Kenny_Head.png');
+    /*background-color: yellow;*/
+    /*border-radius: 0 0 100% 0;*/
 }

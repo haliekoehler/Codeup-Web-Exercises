@@ -9,12 +9,17 @@ var active = true;
 // var mode = normal;
 
 
+// ------ AUDIO FILES
+var themeSong = new Audio('audio/SouthParkThemeSong.mp3');
+var stanSound = new Audio('audio/Stan_Dude.mp3');
+var startSound = new Audio('audio/Kyle_OhGod.mp3');
+
 // ----- START GAME
     function startGame() {
         compArray = [];
-        // userArray = [];
         level = 0;
         flashAll(0);
+        startSound.play();
         $('#levelCnt').text(" " + ++level);
         // change game text
         $('#gameText').text('Watch for Simon\'s Selection!');
@@ -80,7 +85,7 @@ function playBack(array) {
 
 // ----- USER TURN
     function userTurn() {
-        $('#gameText').text('Your Turn! Repeat the sequence for Simon!');
+        $('#gameText').text('YOUR TURN! REPEAT THE SEQUENCE FOR SIMON!');
         // activateBoard();
 
     } // end of userTurn()
@@ -106,11 +111,6 @@ function playBack(array) {
         }
     });
 
-// ----- COMPARE TO COMPUTER ARRAY
-//     function compare(object){
-//
-//     } // end of compare()
-
 
 // ----- NEW LEVEL
     function newLevel() {
@@ -121,25 +121,11 @@ function playBack(array) {
     } // end of newLevel()
 
 
-// ----- ACTIVATE BOARD FOR USER TURN
-//     function activateBoard() {
-//         active = true;
-//         $('.tile').on('click');
-//         console.log('Board is now Activated')
-//     } // end of activateBoard()
-
-
-// ----- DEACTIVATE BOARD FOR COMPUTER TURN
-//     function deactivateBoard() {
-//         active = false;
-//         $('.tile').off('click');
-//         console.log('Board not-active');
-//     } // end of deactivateBoard
-
-
 // ----- GAME OVER, GO HOME
     function endGame() {
-        alert('WRONG!');
+        stanSound.play();
+        alert('YOU LOOOOOOOOOOOOSE! TRY AGAIN!');
+
     } // end of endGame();
 
 
@@ -148,11 +134,11 @@ function playBack(array) {
 
 $(document).ready(function () {
 
+    themeSong.play();
+
     $('#startBtn').click(function () {
 
         startGame();
-
-        // deactivateBoard();
 
         compBuild();
 

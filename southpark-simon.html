@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Southpark Simon</title>
+    <link rel="stylesheet" href="css/flexboxgrid.min.css">
+    <link rel="stylesheet" href="css/southpark.css">
+</head>
+<body>
+
+<div id="headerDiv">
+    <h1 id="main-header">SOUTHPARK SIMON</h1>
+</div>
+
+<div id="main-container">
+    <div id="leftDiv" class="container col-sm-3 col-sm-offset-1">
+        <label for="difficulty">DIFFICULTY</label>
+        <select id="difficulty" name="difficulty">
+            <option>easy</option>
+            <option>hard</option>
+            <option>weird</option>
+        </select>
+        <button id="startBtn" type="button" class="">START</button>
+        <p id="levelP">LEVEL: <span id="levelCnt"> - - </span></p>
+    </div>
+
+    <div id="rightDiv" class="container">
+        <div id="gameText">
+            <p class="end-xs">HOWDY NEIGHBOR!<br> HIT START TO BEGIN!</p>
+        </div>
+
+        <div id="gameboardDiv">
+            <div id="gameBoard" class="row">
+                <div id="cartman" data-tile="0" class="box"><img src="img/Cartman_Head.png"></div>
+                <div id="stan" data-tile="1" class="box"><img src="img/Stan_Head.png"></div>
+                <div id="kyle" data-tile="2" class="box"><img src="img/Kyle_Head.png"></div>
+                <div id="kenny" data-tile="3" class="box"><img src="img/Kenny_Head.png"></div>
+            </div>
+        </div>
+    </div>
+</div> <!-- end of #main-container -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/southpark-simon.js"></script>
+</body>
+</html>

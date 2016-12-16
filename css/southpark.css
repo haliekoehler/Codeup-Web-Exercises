@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    background-image: url('../img/southpark_busstop.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 4px;
+    font-size: 3.5em;
+}
+
+label {
+    display: block;
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    font-family: 'Roboto', sans-serif;
+}
+
+select {
+    margin: 5px 5px 20px 5px;
+    text-align-last: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: bolder;
+    width: 50%;
+    height: 10%;
+}
+
+option {
+    text-align: center;
+    font-weight: 500;
+    background-color: transparent;
+    margin: 5px;
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    align-self: flex-end;
+    display: block;
+    margin: 0 auto;
+    font-weight: bolder;
+    font-size: 2em;
+    padding: 5px;
+    width: 50%;
+    height: 20%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+}
+
+#headerDiv {
+    display: block;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+#leftDiv {
+    background-color: rgba(255, 250, 240, .4);
+    border: 1px floralwhite solid;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+}
+
+#rightDiv {
+    align-items: center;
+}
+
+#levelP {
+    border: 1px solid antiquewhite;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    padding: 15px;
+}
+
+#gameText {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 2em;
+    font-weight: bold;
+    float: left;
+}
+
+#gameboardDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#gameBoard {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 20%;
+    background-color: rgba(255, 250, 240, .2);
+    height: 400px;
+    width: 400px;
+}
+
+.box {
+    display: flex;
+    align-self: center;
+    flex-wrap: wrap;
+    height: 48%;
+    width: 48%;
+    opacity: .6;
+}
+
+.active {
+    opacity: 1;
+}
