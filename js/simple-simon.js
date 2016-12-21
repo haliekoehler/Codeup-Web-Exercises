@@ -10,7 +10,7 @@ var active = true;
 
 
 // ------ AUDIO FILES
-var themeSong = new Audio('audio/SouthParkThemeSong.mp3');
+var themeSong = new Audio('audio/southparkthemeEDIT.mp3');
 var stanSound = new Audio('audio/Stan_Dude.mp3');
 var startSound = new Audio('audio/Kyle_OhGod.mp3');
 
@@ -23,6 +23,7 @@ var startSound = new Audio('audio/Kyle_OhGod.mp3');
         $('#levelCnt').text(" " + ++level);
         // change game text
         $('#gameText').text('Watch for Simon\'s Selection!');
+        compBuild();
     } // end of startGame()
 
 
@@ -48,7 +49,7 @@ var startSound = new Audio('audio/Kyle_OhGod.mp3');
             setTimeout(function() {
                 flashTile($(tile).attr('id'));
                 flashAll(++index);
-            }, 50);
+            }, 20);
         }
     } // end of flashAll()
 
@@ -116,7 +117,6 @@ function playBack(array) {
     function newLevel() {
         $("#gameText").text('Correct! Next Level!');
         ($('#levelCnt').text(" " + ++level));
-        flashAll(0);
         compBuild();
     } // end of newLevel()
 
@@ -129,20 +129,11 @@ function playBack(array) {
     } // end of endGame();
 
 
-
-
-
 $(document).ready(function () {
 
     themeSong.play();
 
     $('#startBtn').click(function () {
-
         startGame();
-
-        compBuild();
-
     });
-
-
 }); // --- end of DOCUMENT.READY

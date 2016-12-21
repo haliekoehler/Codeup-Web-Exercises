@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette|Open+Sans+Condensed:300');
+
+h1 {
+    text-align: center;
+    font-family: 'Courgette', cursive;
+    font-size: 3em;
+}
+
+p {
+    display: inline;
+    font-size: 1em;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.dateText {
+    font-family: 'Courgette', cursive;
+    text-align: center;
+}
+
+.dayDiv{
+    display: flex;
+    flex-direction: column;
+    line-height: 0em;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+#headerDiv {
+    width: 90%;
+}
+
+#weatherDiv {
+    flex-wrap: wrap;
+    width: 90%;
+    border: 1px solid black;
+    border-radius: 50px 50px 0 0;
+}
+
+#weatherHeadDiv {
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: row;
+    font-family: 'Courgette', cursive;
+    font-size: 1.5em;
+    margin: 10px;
+    width: 100%;
+    /*line-height: 0em;*/
+}
+
+#locationHeader {
+    font-size: 1.5em;
+    margin: 5px;
+}
+
+#numberOfDays {
+    font-size: 1em;
+    border: 1px solid black;
+    border-radius: 20px;
+    height: 1em;
+    width: auto;
+    padding: 10px;
+    margin: 5px;
+
+}
+
+#forecastDiv {
+    font-family: 'Open Sans Condensed', sans-serif;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#weekday {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0;
+}
+
+#date {
+    font-size: 1em;
+}
+
+#high {
+    font-size: 2em;
+}
+
+#low {
+    font-size: 1.2em;
+}
+
+#icon{
+    display: inline;
+    max-width: 60px;
+    max-height: 80px;
+}
+
+#map-canvas {
+    height: 300px;
+    width: 90%;
+    border: 1px solid black;
+    border-radius: 0 0 50px 50px;
+}

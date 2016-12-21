@@ -27,7 +27,7 @@ weatherData.done(function (data) {
 
    data.list.forEach(function (obj) {
         days +=
-            "<div class='dayDiv'>"
+            "<div class='dayDiv box'>"
             + "<h5 class='dateText'>" + moment.unix(obj.dt).format("dddd, MMM-DD-YYYY") + "</h5>"
             + "<p id='highLow'><strong>High:</strong> " + Math.round(obj.temp.max) + "&deg" + " /// " + "<strong>Low:</strong> " + Math.round(obj.temp.min) + "&deg" + "</p>"
             + "<p id='conditions'><strong>Conditions:</strong> " + obj.weather[0].main + " ( " + obj.weather[0].description + " )</p>"
@@ -90,6 +90,7 @@ var mapOptions = {
         lat: 29.42412,
         lng: -98.493629
     },
+    scrollwheel: false,
     mapTypeId: 'terrain',
     mapTypeControl: true,
     mapTypeControlOptions: {

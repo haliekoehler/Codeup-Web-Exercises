@@ -13,10 +13,18 @@ strong {
 }
 
 p {
+    display: flex;
     color: aliceblue;
     margin: 4px;
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
 .dateText {
+    display: block;
     background-color: aliceblue;
     margin: 0 0 5px 0;
     padding: 3px;
@@ -26,15 +34,31 @@ p {
 }
 
 .dayDiv {
+    display: flex;
+    flex-direction: column;
     border: 1px solid rgba(27, 109, 133, 0.7);
     border-radius: 10px;
-    margin: 3px;
-    padding: 5px;
+    /*padding: 5px;*/
     width: 200px;
 }
 
+#float-content{
+    z-index: 1;
+    position: relative;
+    width: 100%;
+}
+
+#headerDiv {
+    background-color: rgba(225, 225, 225, .8);
+    display: inline;
+    position: fixed;
+    top: 0;
+    height: 100px;
+    width: 100%;
+}
+
 #forecastDiv > .dayDiv:first-child {
-    width: 250px;
+    /*width: 250px;*/
     background-color: rgba(27, 109, 133, 0.7);
     border-radius: 10px;
     margin: 3px;
@@ -49,13 +73,14 @@ p {
 #main-header {
     text-align: center;
     font-family: 'Titillium Web', sans-serif;
-    font-size: 60px;
+    /*font-size: 60px;*/
 }
 
 #map-canvas {
     height: 100%;
+    width: 100%;
     position: absolute;
-    bottom: -200px;
+    bottom: -100px;
     left: 0;
     right: 0;
     z-index: 0;
@@ -63,19 +88,12 @@ p {
 
 #forecastDiv {
     padding: 2px;
-    height: 100vh;
-    width: 300px;
-}
-
-#float-content{
-    z-index: 100;
-    position: relative;
 }
 
 #weatherDiv {
+    display: inline;
     position: fixed;
-    background-color: rgba(27, 109, 133, 0.2);
-    max-width: 250px;
+    /*background-color: rgba(27, 109, 133, 0.2);*/
     top: 100px;
     bottom: auto;
 }
@@ -90,7 +108,7 @@ p {
     color: white;
     font-weight: bolder;
     border-radius: 10px;
-    width: 250px;
+    /*width: 250px;*/
 }
 
 #numberOfDays {
@@ -99,8 +117,3 @@ p {
     letter-spacing: 3px;
     font-weight: bolder;
 }
-
-/*#headerDiv {*/
-    /*width: 100vw;*/
-    /*height: 100px;*/
-/*}*/

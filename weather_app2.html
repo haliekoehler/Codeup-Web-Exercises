@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Weather Map 2.0</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css">
+    <link rel="stylesheet" href="css/weather_app2.css">
+</head>
+<body>
+
+<!-- Header Div -->
+<div id="headerDiv" class="container">
+    <h1 id="mainHeader">Weather Forecast Application</h1>
+</div>
+
+<!-- Forecast Div -->
+<div id="weatherDiv" class="container">
+    <div id="weatherHeadDiv" class="container col-xs-10">
+        <p id="locationHeader"><span id="cityName"></span></p>
+        <p id="numberOfDays"><span id="dayCount"></span>-day Forecast</p>
+    </div>
+    <div id="forecastDiv" class="container col-xs-10">
+
+    </div>
+</div>
+
+
+<!-- Map Canvas -->
+<div id="map-canvas" class="container"></div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaebneocP-VowOV5QRoBGb1HxClfyEfeY"></script>
+<script src="js/weather_app2.js"></script>
+</body>
+</html>
